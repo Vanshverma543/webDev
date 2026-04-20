@@ -47,7 +47,7 @@ ul{
 .hero{
     position: relative;
     height: 100vh;
-    background: url('./img/a1.jpg') no-repeat center center/cover;
+    background: url('.a1.jpg"') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,7 +187,7 @@ hr{
 /* Background */
 .login-bg{
     height: 100vh;
-    background: url('../cravingsCloneProject/img/a3.jpg') no-repeat center/cover;
+    background: url('../cravings/') no-repeat center/cover;
     display: flex;
     justify-content: flex-start;   
     align-items: center;
@@ -354,7 +354,7 @@ body{
 
 .register-bg{
     height: 100vh;
-    background: url('../cravingsCloneProject/img/a4.jpg') no-repeat center/cover;
+    background: url('../cravings/img/a4.jpg') no-repeat center/cover;
     display: flex;
     justify-content: flex-end;   /* 👈 right side */
       align-items: flex-end; 
@@ -611,7 +611,7 @@ body{
 /* contact form */
 .contact-section{
     height: 100vh;
-    background: url('../cravingsCloneProject/img/a5.jpeg') no-repeat center/cover;
+    background: url('../cravings/img/a5.jpeg') no-repeat center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -688,7 +688,7 @@ form button:hover{
 /* ===== HERO ===== */
 .sitemap-hero{
     height: 280px;
-    background: url('../cravingsCloneProject/img/a6.webp') no-repeat center/cover;
+    background: url('../cravings/img/a6.webp') no-repeat center/cover;
     position: relative;
     display: flex;
     justify-content: center;
