@@ -47,7 +47,7 @@ ul{
 .hero{
     position: relative;
     height: 100vh;
-    background: url('./img/a1.jpg') no-repeat center center/cover;
+    background: url('../img/a1.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,7 +187,7 @@ hr{
 /* Background */
 .login-bg{
     height: 100vh;
-    background: url('..//cravingsCloneProject/img/a3.jpg') no-repeat center/cover;
+    background: url('../img/a3.jpg') no-repeat center/cover;
     display: flex;
     justify-content: flex-start;   
     align-items: center;
@@ -354,7 +354,7 @@ body{
 
 .register-bg{
     height: 100vh;
-    background: url('../cravingsCloneProject/img/a4.jpg') no-repeat center/cover;
+    background: url('../img/a4.jpg') no-repeat center/cover;
     display: flex;
     justify-content: flex-end;   /* 👈 right side */
       align-items: flex-end; 
