@@ -1,0 +1,31 @@
+body{
+background-color: #e8eff5;
+}
+h1{
+   
+ text-align: center;
+}
+p{
+   text-align: center; 
+    
+}
+table{
+    background:#d9e5ef;
+    margin: auto;
+    border-radius: 10px;
+
+}
+select{
+    width: 95%;
+    padding: 8px;
+    margin-top: 5px;
+}
+input{
+    width: 95%;
+    padding: 8px;
+  margin-top: 5px;
+}
+input[type="checkbox"]{
+width:auto;
+margin-right:5px;
+}

@@ -1,0 +1,25 @@
+#div1{
+    border: 1px solid black;
+    width: 10px;
+    height: 20px;
+    overflow: hidden;
+    text-wrap-mode:nowrap ;
+}
+#div1:hover{
+    width: 200px;
+    transition: width 3s linear;
+}
+#div2{
+    border: 1px solid black;
+    height: 20px;
+    overflow: hidden;
+    text-wrap-mode: nowrap;
+}
+#card{
+    border: 1px solid black;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    text-wrap-mode:nowrap ;
+
+}

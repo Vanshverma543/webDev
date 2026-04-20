@@ -1,0 +1,46 @@
+body{
+background-color: #a5ef6d;
+
+}
+
+
+#ab{
+    
+    width: 400px;
+    height: 450px;
+    background-color: rgb(242, 242, 242);
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 5px;
+    text-align: center;
+    
+    
+
+}
+h1{
+    letter-spacing: 5px;
+     padding-top: 20px;
+   
+}
+input{
+    width: 80%;
+    padding: 9px;
+    margin-top: 6px;
+}
+textarea{
+    width: 80%;
+    padding: 12px;
+    margin-top: 6px;
+}
+button{
+   letter-spacing: 6px;
+    width: 80%;
+    padding: 12px;
+    margin-top: 6px;
+    background-color: rgb(25, 219, 86);
+    color: white;
+    border: 5px solid rgb(25, 219, 86);
+    border-radius: 50px;
+    font-size: 20px;
+    
+}

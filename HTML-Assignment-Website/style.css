@@ -1,0 +1,31 @@
+:root{
+    --primary-color:rgb(252, 166, 7);
+    --secondary-color:green;
+    --text-color:blue;
+}
+h1{
+    color:var(--primary-color) 
+}
+h1{
+    text-align: center;
+}
+p{
+    color:var(--secondary-color)
+}
+h2{
+    color:var(--secondary-color);
+}
+h3{
+    color:var(--text-color)
+}
+ul{
+    color:var(--primary-color)
+}
+footer{
+    color:var(--secondary-color)
+}
+body{
+    background-color: black;
+}
+
+

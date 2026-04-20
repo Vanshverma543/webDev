@@ -1,0 +1,19 @@
+#head{
+    margin: 0;
+    padding: 0;
+    background-color: chocolate;
+    color: black;
+    justify-content: center;
+    position:sticky;
+}
+#body{
+    margin: 0;
+    padding: 10;
+    background-color: rgb(205, 244, 14);
+    color: black;
+    justify-content: center;
+}
+#h1{
+
+ justify-content: center;
+}
