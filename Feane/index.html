@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Navbar */
+      .navbar {
+        background: transparent;
+        margin-left: 150px;
+        margin-right: 200px;
+        margin-top: 20px;
+      }
+
+      .logo {
+        font-size: 28px;
+        font-weight: bold;
+        font-family: Dancing Script;
+      }
+
+      /* Hero Section */
+      .hero {
+        height: 100vh;
+
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.9),
+          rgba(0, 0, 0, 0.7)
+        );
+
+        background-image: url(../Feane/images/hero-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+
+      /* Title */
+      .hero-title {
+        font-family: Dancing Script;
+        font-size: 50px;
+        font-weight: bold;
+        margin-left: 50px;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+      }
+
+      .hero-content {
+        margin-left: 50px;
+        margin-bottom: 15px;
+        padding-bottom: 20px;
+      }
+
+      .card {
+        margin-left: 100px;
+        margin-right: 150px;
+        padding-left: 100px;
+        padding-right: 100px;
+        border: 0px;
+      }
+      .offer-card {
+        background: #1f2933;
+        padding: 25px;
+        border-radius: 10px;
+        width: 1500px;
+        font-family: dancing script;
+      }
+
+      /* menu button */
+      .button:hover {
+        background-color: black;
+        color: white;
+        transform: scale(1.1);
+        transition: 0.3s;
+      }
+
+      .menu {
+        margin: 0 90px;
+      }
+      /* Card */
+      .menu-card {
+        width: 350px;
+        min-height: 450px;
+        background: #222831;
+        border-radius: 15px;
+        overflow: hidden;
+        margin: 10px 0px;
+      }
+
+      /* Top curved section */
+      .img-box {
+        height: 220px;
+        background: #f5f5f5;
+        border-bottom-left-radius: 50px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .circle {
+        background: #f5f5f5;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%; /* makes perfect circle */
+        overflow: hidden; /* cuts image inside circle */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white; /* optional */
+      }
+
+      /* Image inside circle */
+      .circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* fills circle properly */
+      }
+
+      /* Hover effect */
+      .menu-card:hover img {
+        transform: scale(1.1);
+        transition: 0.3s;
+      }
+
+      /* Content */
+      .content {
+        padding: 25px;
+        color: white;
+      }
+
+      .content h5 {
+        font-weight: bold;
+      }
+
+      .content p {
+        font-size: 14px;
+        opacity: 0.9;
+      }
+
+      /* Bottom section */
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+      }
+
+      /* Cart Button */
+      .cart-btn {
+        background: #fcbf2d;
+        border: none;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        color: white;
+        font-size: 18px;
+      }
+      /* about section */
+      .about-section {
+        background: #222831;
+        height: 95vh;
+        margin-top: 30px;
+        margin-bottom: 50px;
+      }
+
+      /* Heading font */
+      .title {
+        font-family: dancing script;
+        font-size: 40px;
+      }
+
+      /* Image control */
+      .about-img {
+        max-width: 80%;
+      }
+
+      .book-table {
+        margin-left: 150px;
+      }
+
+      .review-wrapper{
+        position: relative;
+        padding-bottom: 60px;
+      }
+      /* Image container */
+      .profile-img {
+        position: absolute;
+        bottom: -50px;
+        right: 80%;
+        
+      }
+
+      /* Circle image */
+      .profile-img img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 5px solid #fcbf2d;
+        object-fit: cover;
+      }
+    </style>
+</head>
+<body>
+     <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a
+          class="logo text-decoration-none text-white fs-2"
+          href="../Feane/index.html"
+          >Feane</a
+        >
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a
+                class="d-flex justify-content-center align-item-center text-decoration-none text-white m-2"
+                href="../Feane/index.html"
+                >HOME</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="d-flex justify-content-center align-item-center text-decoration-none text-white m-2"
+                href="#"
+                >MENU</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="d-flex justify-content-center align-item-center text-decoration-none text-white m-2"
+                href="#"
+                >ABOUT</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="d-flex justify-content-center align-item-center text-decoration-none text-white m-2"
+                href="#"
+                >BOOK TABLE</a
+              >
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-3">
+            <i class="bi bi-person-fill text-white"></i>
+            <i class="bi bi-cart-fill text-white"></i>
+            <i class="bi bi-search text-white fw-semibold"></i>
+
+            <a href="#" class="btn btn-warning rounded-pill px-5 text-white"
+              >Order Online</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Text -->
+          <div class="col-lg-6 text-white">
+            <h1 class="display-4 hero-title">Fast Food Restaurant</h1>
+            <p class="hero-content mt-3">
+              Doloremque, itaque aperiam facilis rerum, commodi, temporibus
+              sapiente ad mollitia laborum quam quisquam esse error unde.
+              Tempora ex doloremque, labore, sunt repellat dolore, iste magni
+              quos nihil ducimus libero ipsam.
+            </p>
+
+            <a
+              href="#"
+              class="btn btn-warning rounded-pill px-5 mx-5 text-white"
+              >Order Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- offer-section -->
+    <div>
+      <div class="card container py-5">
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-6 d-flex g-5">
+            <div
+              class="offer-card d-flex align-items-center p-4 rounded bg-dark text-white h-100"
+            >
+              <div
+                class="rounded-circle overflow-hidden border border-warning border-4 flex-shrink-0"
+                style="width: 120px; height: 120px"
+              >
+                <img
+                  src="../Feane/images/o2.jpg"
+                  class="w-100 h-100 object-fit-cover"
+                />
+              </div>
+              <div class="content ms-4 text-white">
+                <h4 class="title">Tasty Thursdays</h4>
+                <h2>20% <span>off</span></h2>
+
+                <a
+                  href="#"
+                  class="btn btn-warning rounded-pill px-4 text-white"
+                >
+                  Order Now <i class="bi bi-cart-fill text-white"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-6 d-flex g-5">
+            <div
+              class="offer-card d-flex align-items-center p-4 rounded bg-dark text-white h-100"
+            >
+              <div
+                class="rounded-circle overflow-hidden border border-warning border-4 flex-shrink-0"
+                style="width: 120px; height: 120px"
+              >
+                <img
+                  src="../Feane/images/o2.jpg"
+                  class="w-100 h-100 object-fit-cover"
+                />
+              </div>
+              <div class="content ms-4 text-white">
+                <h4 class="title">Pizza Days</h4>
+                <h2>15% <span>off</span></h2>
+
+                <a
+                  href="#"
+                  class="btn btn-warning rounded-pill px-4 text-white"
+                >
+                  Order Now <i class="bi bi-cart-fill text-white"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- menu section -->
+    <div class="container">
+      <!-- Heading -->
+      <h2 class="text-center title mb-4" style="font-family: dancing script">
+        Our Menu
+      </h2>
+
+      <!-- Filters -->
+      <div class="d-flex justify-content-center gap-3 mb-5 flex-wrap">
+        <button class="button btn rounded-pill px-4">All</button>
+        <button class="button btn rounded-pill px-4">Burger</button>
+        <button class="button btn rounded-pill px-4">Pizza</button>
+        <button class="button btn rounded-pill px-4">Pasta</button>
+        <button class="button btn rounded-pill px-4">Fries</button>
+      </div>
+
+      <!-- Cards -->
+      <div class="menu row g-4">
+        <!-- Card1 -->
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="menu-card">
+            <div class="img-box">
+              <div class="circle"><img src="../Feane/images/menu1.png" /></div>
+            </div>
+
+            <div class="content">
+              <h5>Delicious Pizza</h5>
+              <p>
+                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam
+                velit, magnam voluptatem repellendus sed eaque
+              </p>
+
+              <div class="bottom">
+                <span>$20</span>
+                <button class="cart-btn">
+                  <i class="bi bi-cart-fill text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--  Card2 -->
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="menu-card">
+            <div class="img-box">
+              <div class="circle"><img src="../Feane/images/menu2.png" /></div>
+            </div>
+
+            <div class="content">
+              <h5>Delicious Burger</h5>
+              <p>
+                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam
+                velit, magnam voluptatem repellendus sed eaque
+              </p>
+
+              <div class="bottom">
+                <span>$15</span>
+                <button class="cart-btn">
+                  <i class="bi bi-cart-fill text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card3 -->
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="menu-card">
+            <div class="img-box">
+              <div class="circle"><img src="../Feane/images/menu3.png" /></div>
+            </div>
+
+            <div class="content">
+              <h5>Delicious Pizza</h5>
+              <p>
+                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam
+                velit, magnam voluptatem repellendus sed eaque
+              </p>
+
+              <div class="bottom">
+                <span>$17</span>
+                <button class="cart-btn">
+                  <i class="bi bi-cart-fill text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card4 -->
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="menu-card">
+            <div class="img-box">
+              <div class="circle"><img src="../Feane/images/menu4.png" /></div>
+            </div>
+
+            <div class="content">
+              <h5>Delicious Pasta</h5>
+              <p>
+                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam
+                velit, magnam voluptatem repellendus sed eaque
+              </p>
+
+              <div class="bottom">
+                <span>$17</span>
+                <button class="cart-btn">
+                  <i class="bi bi-cart-fill text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card5 -->
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="menu-card">
+            <div class="img-box">
+              <div class="circle"><img src="../Feane/images/menu5.png" /></div>
+            </div>
+
+            <div class="content">
+              <h5>French Fries</h5>
+              <p>
+                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam
+                velit, magnam voluptatem repellendus sed eaque
+              </p>
+
+              <div class="bottom">
+                <span>$17</span>
+                <button class="cart-btn">
+                  <i class="bi bi-cart-fill text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card6 -->
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="menu-card">
+            <div class="img-box">
+              <div class="circle"><img src="../Feane/images/menu6.png" /></div>
+            </div>
+
+            <div class="content">
+              <h5>Delicious Pizza</h5>
+              <p>
+                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam
+                velit, magnam voluptatem repellendus sed eaque
+              </p>
+
+              <div class="bottom">
+                <span>$17</span>
+                <button class="cart-btn">
+                  <i class="bi bi-cart-fill text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card7 -->
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="menu-card">
+            <div class="img-box">
+              <div class="circle"><img src="../Feane/images/menu7.png" /></div>
+            </div>
+
+            <div class="content">
+              <h5>Tasty Burger</h5>
+              <p>
+                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam
+                velit, magnam voluptatem repellendus sed eaque
+              </p>
+
+              <div class="bottom">
+                <span>$17</span>
+                <button class="cart-btn">
+                  <i class="bi bi-cart-fill text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card8 -->
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="menu-card">
+            <div class="img-box">
+              <div class="circle"><img src="../Feane/images/menu8.png" /></div>
+            </div>
+
+            <div class="content">
+              <h5>Tasty Burger</h5>
+              <p>
+                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam
+                velit, magnam voluptatem repellendus sed eaque
+              </p>
+
+              <div class="bottom">
+                <span>$17</span>
+                <button class="cart-btn">
+                  <i class="bi bi-cart-fill text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 9 -->
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="menu-card">
+            <div class="img-box">
+              <div class="circle"><img src="../Feane/images/menu9.png" /></div>
+            </div>
+
+            <div class="content">
+              <h5>Delicious Pasta</h5>
+              <p>
+                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam
+                velit, magnam voluptatem repellendus sed eaque
+              </p>
+
+              <div class="bottom">
+                <span>$17</span>
+                <button class="cart-btn">
+                  <i class="bi bi-cart-fill text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-5">
+      <a href="#" class="btn btn-warning rounded-pill px-5 py-3 fw-semibold">
+        View More
+      </a>
+    </div>
+
+    <!-- about section -->
+    <div class="about-section d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Image -->
+          <div class="col-lg-6 text-center mb-4 mb-lg-0">
+            <img
+              src="../Feane/images/about-img.png"
+              class="img-fluid about-img"
+              alt=""
+            />
+          </div>
+
+          <!-- Right Content -->
+          <div class="col-lg-6 text-white">
+            <h2 class="title mb-3">We Are Feane</h2>
+
+            <p class="mb-4">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly believable. If you are going to use a passage of Lorem
+              Ipsum, you need to be sure there isn't anything embarrassing
+              hidden in the middle of text.
+            </p>
+
+            <a
+              href="#"
+              class="btn btn-warning rounded-pill px-5 py-2 text-white"
+            >
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- book a table -->
+    <div class="container py-5 px-5 book-table">
+      <!-- Heading -->
+      <h2 class="title mb-4">Book A Table</h2>
+
+      <!-- Form -->
+      <form class="w-50">
+        <!-- Name -->
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            placeholder="Your Name"
+          />
+        </div>
+
+        <!-- Phone -->
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            placeholder="Phone Number"
+          />
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <input
+            type="email"
+            class="form-control form-control-lg"
+            placeholder="Your Email"
+          />
+        </div>
+
+        <!-- Persons -->
+        <div class="mb-3">
+          <select class="form-select form-select-lg">
+            <option selected disabled>How many persons?</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </div>
+
+        <!-- Date -->
+        <div class="mb-4">
+          <input type="date" class="form-control form-control-lg" />
+        </div>
+
+        <!-- Button -->
+        <button class="btn btn-warning rounded-pill px-5 py-2 text-white">
+          BOOK NOW
+        </button>
+      </form>
+    </div>
+
+    <!-- customer reviews -->
+    <div>
+      <!-- Heading -->
+      <h2 class="text-center title mb-3 " style="font-family: dancing script;" >
+        What Says Our Customers
+      </h2>
+      </div>
+
+      <div class="card container py-3">
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-6 d-flex flex-column align-items-center">
+            <div class="review-wrapper">
+              <div
+              class="  align-items-center p-4 rounded bg-dark text-white h-100"
+            >
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam
+              </p>
+              <p><b>Mike Hamell</b></p>
+              <p>magna aliqua</p>
+            </div>
+            <!-- Image BELOW card -->
+          <div class="profile-img">
+              <img src="../Feane/images/customer1.jpg" alt="">
+          </div>
+            </div>
+            
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-6 d-flex flex-column align-items-center">
+            <div class="review-wrapper">
+              <div
+              class=" align-items-center p-4 rounded bg-dark text-white h-100"
+            >
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam
+              </p>
+              
+              <p><b>Moana Michell</b></p>
+              <p>magna aliqua</p>
+            </div>
+            <!-- Image BELOW card -->
+            <div class="profile-img">
+              <img src="../Feane/images/customer2.jpg" alt="">
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>
