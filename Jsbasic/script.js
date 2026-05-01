@@ -1,17 +1,20 @@
-let n = 5;
-
-if(n > 0) {
-    .console.log();
+let abc = function() {
+    console.log("hello world");
     
-    let data;
-    let name = "vansh"
+};
 
-    if (name) {
-        data =name;
-    } else {
-      data  
 
-    }
-}
+console.log(abc);
+
+let add = function(a, b){
+    return a+b;
+};
+console.log(add);
+console.log(add(4,7));
+
+
+const arrowfun = ()
+ console.log("I am Arrow function");
+};
 
 
