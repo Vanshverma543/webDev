@@ -1,9 +1,9 @@
-export const sampleMIddleWare = async (req, res, next) => {
-    console.log("I am Sample Middleware 1")
+export const sampleMiddleWare = async (req, res, next) => {
+    console.log("I am a middleware 1");
     next();
 };
 
-export const sampleMIddleWare = async (req, res, next) => {
-    console.log("I am Sample Middleware 2")
+export const sampleMiddleWare2 = async (req, res, next) => {
+    console.log("I am a middleware 2");
     next();
 };

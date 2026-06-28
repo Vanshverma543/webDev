@@ -1,31 +1,34 @@
-import dotenv from "dotenv";
+import dotenv from 'dotenv';
 dotenv.config();
 
 import express from "express";
-import connectDB from "./src/config/dbConnection.config.js";
+import AuthRouter from "./src/routers/auth.route.js";
+import PublicRouter from "./src/routers/public.route.js";
+import dbConnection from "./src/config/dbConnection.config.js";
 
 const app = express();
 
 app.use(express.json());
 
-//Default API
+
+app.use("/auth", AuthRouter);
+app.use("/public", PublicRouter);
+
 app.get("/", (req, res) => {
-  console.log("Default Get API Hit");
-  res.json({ message: "Welcome to my Cravings Project" });
+    console.log("Default Get API hit");
+    res.json({ message: "Welcome to Cravings Project" });
 });
 
-//Default Error Handler
-
+//default Error Handler
 app.use((err, req, res, next) => {
-  const ErrMessage = err.message || "Internal Server Error";
-  const ErrStausCode = err.statusCode || 500;
+    const ErrorMessage = err.message || "Internal Server Error";
+    const ErrorStatusCode = err.statusCode || 500;
+    res.status(ErrorStatusCode).json({ message: ErrorMessage });
 
-  res.status(ErrStausCode).json({ message: ErrMessage });
 });
 
 const port = process.env.PORT || 5000;
-
 app.listen(port, () => {
-  console.log("Server Started on port:", port);
-  connectDB();
+    console.log("server started in port:", port);
+    dbConnection();
 });
